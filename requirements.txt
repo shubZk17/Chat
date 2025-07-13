@@ -5,3 +5,4 @@ streamlit
 faiss-cpu
 python-dotenv
 PyPDF2
+
