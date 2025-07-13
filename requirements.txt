@@ -2,7 +2,7 @@ langchain
 langchain-openai
 openai
 streamlit
-faiss-cpu
+chromadb
 python-dotenv
 PyPDF2
 
