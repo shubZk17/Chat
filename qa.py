@@ -11,8 +11,11 @@ def get_qa_chain(vector_store, k=3):
     retriever = vector_store.as_retriever(search_kwargs={"k": k})
     logger.info(f"Retriever created (top {k} docs)")
 
-    # Use an OpenAI chat model (e.g. gpt-3.5-turbo) for answering
-    llm = ChatOpenAI(temperature=0)
+    # Explicitly provide the API key from env
+    llm = ChatOpenAI(
+        temperature=0,
+        openai_api_key=os.getenv("OPENAI_API_KEY")
+    )
     qa_chain = RetrievalQA.from_llm(llm=llm, retriever=retriever)
     logger.info("RetrievalQA chain created")
     return qa_chain
