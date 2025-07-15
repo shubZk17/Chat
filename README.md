@@ -1,4 +1,5 @@
-📄 LangChain PDF Chatbot
+📄 LangChain PDF Chatbot:
+
 A chatbot built with LangChain, capable of reading and answering questions from PDF documents using LLMs like OpenAI's GPT. Simply upload a PDF and start chatting with your data!
 
 🚀 Features
