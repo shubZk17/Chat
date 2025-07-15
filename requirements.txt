@@ -1,6 +1,5 @@
 langchain==0.1.14
 langchain-community
-chromadb==0.4.22
 openai
 faiss-cpu
 streamlit

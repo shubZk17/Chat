@@ -1,7 +1,6 @@
 import logging
 from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
-
+from langchain_community.vectorstores import FAISS
 logger = logging.getLogger(__name__)
 
 def create_vector_store(text_chunks):
@@ -10,7 +9,7 @@ def create_vector_store(text_chunks):
     """
     logger.info(f"Creating embeddings for {len(text_chunks)} chunks")
     embeddings = OpenAIEmbeddings()  # uses OPENAI_API_KEY from env
-    vector_store = Chroma.from_texts(text_chunks, embedding=embeddings)
+    vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     return vector_store
 
 def save_vector_store(vector_store, directory="faiss_index"):
