@@ -1,11 +1,8 @@
-
-
-langchain-openai
-openai
-streamlit
 langchain==0.1.14
 chromadb==0.4.22
-
+openai
+faiss-cpu
+tiktoken
+pypdf
 python-dotenv
-PyPDF2
-
+streamlit
